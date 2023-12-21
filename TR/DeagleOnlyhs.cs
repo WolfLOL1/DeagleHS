@@ -1,4 +1,4 @@
-﻿using CounterStrikeSharp.API;
+using CounterStrikeSharp.API;
 using CounterStrikeSharp.API.Core;
 using CounterStrikeSharp.API.Core.Attributes.Registration;
 using CounterStrikeSharp.API.Modules.Admin;
@@ -12,7 +12,7 @@ namespace DeagleOnlyHS;
 public class DeagleOnlyHS : BasePlugin
 {
     public override string ModuleAuthor => "Abby";
-    public override string ModuleName => "Abby deagle only headshot";
+    public override string ModuleName => "Abby DHS";
     public override string ModuleVersion => "v1";
 
 
@@ -21,9 +21,9 @@ public class DeagleOnlyHS : BasePlugin
         RegisterEventHandler<EventPlayerHurt>(OnPlayerHurt, HookMode.Pre);
     }
 
-    [ConsoleCommand("css_deaglehsopen")]
-    [ConsoleCommand("css_dhsop")]
-    [ConsoleCommand("css_dhso")]
+    [ConsoleCommand("css_deaglehsac")]
+    [ConsoleCommand("css_dhsac")]
+    [ConsoleCommand("css_dhsa")]
     [RequiresPermissions("@css/slay")]
     public void OnlyHsAndQQEnabled(CCSPlayerController? caller, CommandInfo info)
     {
@@ -31,13 +31,13 @@ public class DeagleOnlyHS : BasePlugin
         
         if(onlyhsenabled == true)
         {
-            Server.PrintToChatAll($"{ChatColors.Red} Abby DHS {ChatColors.Default} ‖ {ChatColors.Green}DeagleHS turned on");
+            Server.PrintToChatAll($"{ChatColors.Red} Deagle HS {ChatColors.Default} ‖ {ChatColors.Green}OnlyHS Açık hale getirildi");
         }
     }
 
-    [ConsoleCommand("css_deaglehsclose")]
-    [ConsoleCommand("css_dhsclose")]
-    [ConsoleCommand("css_dhsc")]
+    [ConsoleCommand("css_deaglehskapat")]
+    [ConsoleCommand("css_dhskapat")]
+    [ConsoleCommand("css_dhsk")]
     [RequiresPermissions("@css/slay")]
     public void OnlyHsAndQQDisabled(CCSPlayerController? caller, CommandInfo info)
     {
@@ -45,21 +45,22 @@ public class DeagleOnlyHS : BasePlugin
         
         if(onlyhsenabled == false)
         {
-            Server.PrintToChatAll($"{ChatColors.Red} Abby DHS {ChatColors.Default} ‖ {ChatColors.Green}DeagleHS turned off");
+            Server.PrintToChatAll($"{ChatColors.Red} Deagle HS {ChatColors.Default} ‖ {ChatColors.Green}OnlyHS kapalı hale getirildi");
         }
     }
 
     [ConsoleCommand("css_dhs")]
+    [ConsoleCommand("css_hsdurum")]
     public void OnlyHsStatus(CCSPlayerController? @event, CommandInfo info)
     {    
         var oyuncu = @event;
         if(onlyhsenabled == false)
         {
-            oyuncu.PrintToChat($"{ChatColors.Red} Abby DHS  {ChatColors.Default} ‖ {ChatColors.Green}DeagleHS currently off");
+            oyuncu.PrintToChat($"{ChatColors.Red} Deagle HS  {ChatColors.Default} ‖ {ChatColors.Green}OnlyHS Şuan kapalı");
         }
         else if(onlyhsenabled == true)
         {
-            oyuncu.PrintToChat($"{ChatColors.Red} Abby DHS {ChatColors.Default} ‖ {ChatColors.Green}DeagleHS currently on");
+            oyuncu.PrintToChat($"{ChatColors.Red} Deagle HS {ChatColors.Default} ‖ {ChatColors.Green}OnlyHS Şuan Açık");
         }
     }
 
