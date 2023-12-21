@@ -16,7 +16,7 @@ commands for disable DeagleHS:
 
 css_deaglehsclose / !deaglehsclose  ‖
 css_dhsclose / !dhsclose  ‖
-css_dhsc / !dhsc  ‖
+css_dhsc / !dhsc  
 
 ---------------------------------------
 
