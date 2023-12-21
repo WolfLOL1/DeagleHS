@@ -6,17 +6,17 @@ When commands are used, a notification will be sent to all players in the chat.
 -
 commands for enable DeagleHS:
 
-css_deaglehsopen / !deaglehsopen , ‖
-css_dhsop / !dhsop , ‖
-css_dhso / !dhso , ‖
+css_deaglehsopen / !deaglehsopen  ‖
+css_dhsop / !dhsop  ‖
+css_dhso / !dhso  ‖
 
 ---------------------------------------
 
 commands for disable DeagleHS:
 
-css_deaglehsclose / !deaglehsclose , ‖
-css_dhsclose / !dhsclose , ‖
-css_dhsc / !dhsc , ‖
+css_deaglehsclose / !deaglehsclose  ‖
+css_dhsclose / !dhsclose  ‖
+css_dhsc / !dhsc  ‖
 
 ---------------------------------------
 
