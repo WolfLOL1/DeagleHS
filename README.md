@@ -1,7 +1,9 @@
 Deagle Only Headshot Plugin for Counter-Strike:2
 -------------------------------------------------------------------------------------------------
 #default required permission @css/slay for enable/disable commands.
+-
 When commands are used, a notification will be sent to all players in the chat.
+-
 commands for enable DeagleHS:
 
 css_deaglehsopen / !deaglehsopen 
